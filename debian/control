@@ -1,0 +1,32 @@
+Source: tomsfastmath
+Priority: optional
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Uploaders: Sebastian Andrzej Siewior <sebastian@breakpoint.cc>
+Build-Depends: debhelper (>= 9), libtool-bin
+Standards-Version: 3.9.8
+Section: libs
+Homepage: http://www.libtom.net/
+Vcs-Git: https://anonscm.debian.org/git/pkg-clamav/tomsfastmath.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-clamav/tomsfastmath.git
+
+Package: libtfm-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: libtfm1 (= ${binary:Version}), ${misc:Depends}
+Description: Fast multiple-precision integer library [development files]
+ This package contains the files needed to create programs that use
+ libtfm1. It is not needed to merely execute programs that use
+ libtfm1.
+
+Package: libtfm1
+Architecture: any
+Multi-Arch: same
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Fast multiple-precision integer library [runtime]
+ TomsFastMath is a fast open source, large integer arithmetic library
+ written in portable ISO C. It is a port of LibTomMath with optional
+ support for inline assembler multipliers.
+ .
+ This package contains the library itself which is need to run programs
+ that use libtfm1.

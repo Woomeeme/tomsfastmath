@@ -1,0 +1,32 @@
+tomsfastmath (0.13-4) unstable; urgency=medium
+
+  * Run stest after compile for basic testing (Closes: #838497).
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Sat, 03 Dec 2016 20:34:32 +0100
+
+tomsfastmath (0.13-3) unstable; urgency=medium
+
+  * Sort object files for deterministic linking order, Patch by Reiner
+    Herrmann (Closes: #829270)
+  * Bump standards version to 3.9.8 without further change.
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Sun, 24 Jul 2016 21:57:17 +0200
+
+tomsfastmath (0.13-2) unstable; urgency=medium
+
+  * point to libtom.net as the homepage
+  * drop -dbg package, we get a new -dbgsym package.
+  * drop tfm-duct-tape-misscompile-on-armhf.patch. The gcc bug causing the
+    problem has been fixed in #810009.
+  * Use CPPFLAGS and enable hardening (hardening=+all) during build.
+  * use https:// URLS in Vcs-*
+  * drop the --siltent option from libtool (so bls does not complain).
+  * Bump standards version to 3.9.7 without further change.
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Tue, 08 Mar 2016 21:53:35 +0100
+
+tomsfastmath (0.13-1) unstable; urgency=low
+
+  * Initial release (Closes: #775867)
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Sat, 19 Dec 2015 14:54:57 +0100

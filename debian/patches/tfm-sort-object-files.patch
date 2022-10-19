@@ -1,0 +1,24 @@
+From 033ee1800a11379569bdd5e4dbb278a1510df0b6 Mon Sep 17 00:00:00 2001
+From: Reiner Herrmann <reiner@reiner-h.de>
+Date: Sun, 3 Jul 2016 21:47:13 +0200
+Subject: Sort object files for deterministic linking order
+
+Patch-Name: tfm-sort-object-files.patch
+Signed-off-by: Sebastian Andrzej Siewior <sebastian@breakpoint.cc>
+---
+ makefile.shared | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/makefile.shared b/makefile.shared
+index 4882e21a2386..62ddbfca46a0 100644
+--- a/makefile.shared
++++ b/makefile.shared
+@@ -88,7 +88,7 @@ $(OBJECTS): $(HEADERS)
+ 	$(LTCOMPILE) $(CFLAGS) $(LDFLAGS) -o $@ -c $<
+ 
+ $(LIBNAME): $(OBJECTS)
+-	libtool --mode=link --tag=CC $(CC) $(CFLAGS) $(LDFLAGS) `find . -type f | grep "[.]lo" | xargs` -o $(LIBNAME) -rpath $(LIBPATH) -version-info $(VERSION) -export-symbols libtfm.symbols
++	libtool --mode=link --tag=CC $(CC) $(CFLAGS) $(LDFLAGS) `find . -type f | LC_ALL=C sort | grep "[.]lo" | xargs` -o $(LIBNAME) -rpath $(LIBPATH) -version-info $(VERSION) -export-symbols libtfm.symbols
+ 
+ install: $(LIBNAME)
+ 	install -d -g $(GROUP) -o $(USER) $(DESTDIR)$(LIBPATH)
