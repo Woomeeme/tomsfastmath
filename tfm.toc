@@ -22,6 +22,7 @@
 \contentsline {subsection}{\numberline {2.2.1}Simple Initialization}{8}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Initialize Small Constants}{8}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}Initialize Copy}{8}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Initialization with a random value}{8}{subsection.2.2.4}
 \contentsline {chapter}{\numberline {3}Arithmetic Operations}{9}{chapter.3}
 \contentsline {section}{\numberline {3.1}Odds and Evens}{9}{section.3.1}
 \contentsline {section}{\numberline {3.2}Sign Manipulation}{9}{section.3.2}

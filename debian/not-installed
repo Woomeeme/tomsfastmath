@@ -1,0 +1,2 @@
+usr/lib/${DEB_HOST_MULTIARCH}/libtfm.a
+usr/lib/${DEB_HOST_MULTIARCH}/libtfm.la

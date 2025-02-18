@@ -22,8 +22,8 @@
  * Patch
  * XX - undefined
  */
-#define TFM_VERSION     0x000D0000
-#define TFM_VERSION_S   "v0.13.0"
+#define TFM_VERSION     0x000D0100
+#define TFM_VERSION_S   "v0.13.1"
 
 #ifndef MIN
    #define MIN(x,y) ((x)<(y)?(x):(y))
@@ -252,6 +252,17 @@
    #endif
 #endif
 
+/* use arc4random on platforms that support it */
+#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
+    #define FP_GEN_RANDOM()    arc4random()
+    #define FP_GEN_RANDOM_MAX  0xffffffff
+#endif
+
+/* use rand() as fall-back if there's no better rand function */
+#ifndef FP_GEN_RANDOM
+   #define FP_GEN_RANDOM()    rand()
+   #define FP_GEN_RANDOM_MAX  RAND_MAX
+#endif
 
 /* some default configurations.
  */
@@ -467,14 +478,14 @@ int fp_prime_random_ex(fp_int *a, int t, int size, int flags, tfm_prime_callback
 int fp_count_bits(fp_int *a);
 
 int fp_unsigned_bin_size(fp_int *a);
-void fp_read_unsigned_bin(fp_int *a, unsigned char *b, int c);
+void fp_read_unsigned_bin(fp_int *a, const unsigned char *b, int c);
 void fp_to_unsigned_bin(fp_int *a, unsigned char *b);
 
 int fp_signed_bin_size(fp_int *a);
-void fp_read_signed_bin(fp_int *a, unsigned char *b, int c);
+void fp_read_signed_bin(fp_int *a, const unsigned char *b, int c);
 void fp_to_signed_bin(fp_int *a, unsigned char *b);
 
-int fp_read_radix(fp_int *a, char *str, int radix);
+int fp_read_radix(fp_int *a, const char *str, int radix);
 
 int fp_radix_size(fp_int *a, int radix, int *size);
 int fp_toradix(fp_int *a, char *str, int radix);
@@ -483,5 +494,5 @@ int fp_toradix_n(fp_int * a, char *str, int radix, int maxlen);
 #endif
 
 /* $Source$ */
-/* $Revision: 0.13.0 $ */
-/* $Date: 2015-08-11 23:26:06 +0200 $ */
+/* $Revision: 0.13.1 $ */
+/* $Date: 2017-04-04 01:01:12 +0200 $ */

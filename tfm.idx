@@ -1,6 +1,9 @@
 \indexentry{fp\_init|hyperpage}{8}
 \indexentry{fp\_set|hyperpage}{8}
 \indexentry{fp\_init\_copy|hyperpage}{8}
+\indexentry{fp\_rand|hyperpage}{8}
+\indexentry{FP\_GEN\_RANDOM|hyperpage}{8}
+\indexentry{FP\_GEN\_RANDOM\_MAX|hyperpage}{8}
 \indexentry{fp\_iszero|hyperpage}{9}
 \indexentry{fp\_iseven|hyperpage}{9}
 \indexentry{fp\_isodd|hyperpage}{9}

@@ -9,7 +9,7 @@
  */
 #include <tfm_private.h>
 
-void fp_read_signed_bin(fp_int *a, unsigned char *b, int c)
+void fp_read_signed_bin(fp_int *a, const unsigned char *b, int c)
 {
   /* read magnitude */
   fp_read_unsigned_bin (a, b + 1, c - 1);
@@ -23,5 +23,5 @@ void fp_read_signed_bin(fp_int *a, unsigned char *b, int c)
 }
 
 /* $Source$ */
-/* $Revision: 0.13.0 $ */
-/* $Date: 2015-08-11 23:26:06 +0200 $ */
+/* $Revision: 0.13.1 $ */
+/* $Date: 2015-10-31 22:48:07 +0100 $ */

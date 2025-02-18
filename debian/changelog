@@ -1,3 +1,20 @@
+tomsfastmath (0.13.1-2) unstable; urgency=medium
+
+  * Update watchfile to match releases (Closes: #1009153).
+  * Update VCS-* links.
+  * Make package build without requiring root. Patch by Niels Thykier
+    (Closes: #1089455).
+  * Update standards version to 4.7.0 without further change.
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Mon, 30 Dec 2024 13:07:23 +0100
+
+tomsfastmath (0.13.1-1) unstable; urgency=medium
+
+  * Import new upstream.
+  * Increase FP_MAX_SIZE to be able to process 4K RSA keys.
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Fri, 23 Dec 2022 19:24:59 +0100
+
 tomsfastmath (0.13-4) unstable; urgency=medium
 
   * Run stest after compile for basic testing (Closes: #838497).

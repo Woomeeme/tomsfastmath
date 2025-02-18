@@ -10,6 +10,8 @@
   \item fp\_div\_2d, \hyperpage{10}
   \item fp\_exptmod, \hyperpage{11}
   \item fp\_gcd, \hyperpage{11}
+  \item FP\_GEN\_RANDOM, \hyperpage{8}
+  \item FP\_GEN\_RANDOM\_MAX, \hyperpage{8}
   \item fp\_init, \hyperpage{8}
   \item fp\_init\_copy, \hyperpage{8}
   \item fp\_invmod, \hyperpage{11}
@@ -26,6 +28,7 @@
   \item fp\_mul\_2, \hyperpage{10}
   \item fp\_mul\_2d, \hyperpage{10}
   \item fp\_neg, \hyperpage{9}
+  \item fp\_rand, \hyperpage{8}
   \item fp\_rshd, \hyperpage{10}
   \item fp\_set, \hyperpage{8}
   \item fp\_sqr, \hyperpage{11}

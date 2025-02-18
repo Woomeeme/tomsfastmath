@@ -9,6 +9,7 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(int argc, char **argv)
 {
@@ -99,13 +100,13 @@ printf(
 "   fp_clamp(B);\n"
 "}\n#endif\n\n\n"
 "/* $Source$ */\n"
-"/* $Revision: 0.13.0 $ */\n"
-"/* $Date: 2014-06-12 18:08:10 +0200 $ */\n"
+"/* $Revision: 0.13.1 $ */\n"
+"/* $Date: 2016-10-25 11:13:07 +0200 $ */\n"
 , N+N, N+N);
 
   return 0;
 }
 
 /* $Source$ */
-/* $Revision: 0.13.0 $ */
-/* $Date: 2014-06-12 18:08:10 +0200 $ */
+/* $Revision: 0.13.1 $ */
+/* $Date: 2016-10-25 11:13:07 +0200 $ */

@@ -1,0 +1,25 @@
+From 912fa001ba61618f982b80e487e190e35ccb0e69 Mon Sep 17 00:00:00 2001
+From: Steffen Jaeckel <s@jaeckel.eu>
+Date: Tue, 3 Sep 2019 11:17:32 +0200
+Subject: fix `fp_iseven()`
+
+as indicated by @muks in #21
+
+Patch-Name: fix-fp_iseven.patch
+---
+ src/headers/tfm.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/headers/tfm.h b/src/headers/tfm.h
+index b1754fb813530..3f8e14b23de3b 100644
+--- a/src/headers/tfm.h
++++ b/src/headers/tfm.h
+@@ -335,7 +335,7 @@ const char *fp_ident(void);
+ 
+ /* zero/even/odd ? */
+ #define fp_iszero(a) (((a)->used == 0) ? FP_YES : FP_NO)
+-#define fp_iseven(a) (((a)->used >= 0 && (((a)->dp[0] & 1) == 0)) ? FP_YES : FP_NO)
++#define fp_iseven(a) (((a)->used == 0 && (((a)->dp[0] & 1) == 0)) ? FP_YES : FP_NO)
+ #define fp_isodd(a)  (((a)->used > 0  && (((a)->dp[0] & 1) == 1)) ? FP_YES : FP_NO)
+ 
+ /* set to a small digit */

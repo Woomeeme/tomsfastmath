@@ -32,7 +32,9 @@ override_dh_auto_test:
 
 PKGVER := $(shell dpkg-parsechangelog -SVersion | sed 's/-.*//')
 override_dh_auto_install:
-	dh_auto_install -- -f makefile.shared GROUP=root USER=root LIBPATH=/usr/lib/$(DEB_HOST_MULTIARCH)
+	# Pass the current user and group to work around chown'ing. The packaging stack will reset it to root:root
+	# later.
+	dh_auto_install -- -f makefile.shared GROUP=$$(id -g) USER=$$(id -u) LIBPATH=/usr/lib/$(DEB_HOST_MULTIARCH)
 	mkdir -p debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/pkgconfig
 	sed < debian/tomsfastmath.pc.in > debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/pkgconfig/tomsfastmath.pc \
 		"s/@VERSION@/$(PKGVER)/"

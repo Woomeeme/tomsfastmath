@@ -32,6 +32,7 @@ libtfm.so.1 libtfm1 #MINVER#
  fp_mulmod@Base 0.13
  fp_prime_random_ex@Base 0.13
  fp_radix_size@Base 0.13
+ fp_rand@Base 0.13.1
  fp_read_radix@Base 0.13
  fp_read_signed_bin@Base 0.13
  fp_read_unsigned_bin@Base 0.13
